@@ -10,16 +10,14 @@
     </ion-item>
 
     <!-- Mensaje de error cuando falla la autenticación -->
-    <ion-text color="danger" *ngIf="loginFailed">
-      Usuario o clave incorrectos.
-    </ion-text>
+    
 
     <ion-button expand="full" (click)="onSubmit()">Login</ion-button>
 
     <!-- Botón para recuperar la contraseña -->
-    <ion-button routerLink="/page/recuperar">Recuperar contraseña</ion-button>
-
+    
+    <ion-button expand="full" routerLink="/page/registrar">Forgot Password</ion-button>
     <!-- Botón para registrar un nuevo usuario -->
-    <ion-button routerLink="/page/registrar">¿No tienes cuenta? Registrate aquí</ion-button>
+    
   </form>
 </ion-content>

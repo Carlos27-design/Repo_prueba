@@ -8,21 +8,32 @@ import { VistaProfesorComponent } from './vista-profesor/vista-profesor.componen
 import { LogoutComponent } from './logout/logout.component';
 import { RecuperarComponent } from './recuperar/recuperar.component';
 import { RegistrarComponent } from './registrar/registrar.component';
+import { authGuard } from '../guards/auth.guard';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'recuperar', component: RecuperarComponent },
-  { path: 'home', component: HomeComponent },
+  { path: 'home', component: HomeComponent, canActivateChild: [authGuard] },
   { path: 'logout', component: LogoutComponent },
   { path: 'qr', component: QrComponent },
-  { path: 'vista-alumno', component: VistaAlumnoComponent },
-  { path: 'vista-profesor', component: VistaProfesorComponent },
+  {
+    path: 'vista-alumno',
+    component: VistaAlumnoComponent,
+    canActivateChild: [authGuard],
+  },
+  {
+    path: 'vista-profesor',
+    component: VistaProfesorComponent,
+    canActivateChild: [authGuard],
+  },
   { path: 'registrar', component: RegistrarComponent },
+
+  { path: '**', redirectTo: 'login' },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class PageRoutingModule { }
+export class PageRoutingModule {}

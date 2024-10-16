@@ -8,86 +8,28 @@
     <!-- Campos del formulario -->
     <ion-item>
       <ion-label position="floating">Nombres</ion-label>
-      <ion-input formControlName="nombres"></ion-input>
+      <ion-input formControlName="nombre"></ion-input>
     </ion-item>
-    <ion-item>
-      <ion-label position="floating">Apellidos</ion-label>
-      <ion-input formControlName="Apellidos"></ion-input>
-    </ion-item>
+    
     <ion-item>
       <ion-label position="floating">Correo Electronico </ion-label>
-      <ion-input formControlName="correo Electronico" type="email"></ion-input>
+      <ion-input formControlName="correo" type="email"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating">Contraseña</ion-label>
       <ion-input formControlName="contrasena" type="password"></ion-input>
     </ion-item>
+   
     <ion-item>
-      <ion-label position="floating">Número de teléfono</ion-label>
-      <ion-input formControlName="número"></ion-input>
-
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="floating">Comuna</ion-label>
-      <ion-select formControlName="comuna">
-        <ion-select-option value="Las Condes">Las Condes</ion-select-option>
-        <ion-select-option value="Chicureo">Chicureo</ion-select-option>
-        <ion-select-option value="Vitacura">Vitacura</ion-select-option>
-        <ion-select-option value="Lo Barnechea">Lo Barnechea</ion-select-option>
-        <ion-select-option value="Quilicura">Quilicura</ion-select-option>
-        <ion-select-option value="La Reina">La Reina</ion-select-option>
-        <ion-select-option value="Providencia">Providencia</ion-select-option>
-        <ion-select-option value="Nunoa">Ñuñoa</ion-select-option>
-        <ion-select-option value="La Florida">La Florida</ion-select-option>
-        <ion-select-option value="Lo Prado">Lo Prado</ion-select-option>
-        <ion-select-option value="Macul">Macul</ion-select-option>
-        <ion-select-option value="Maipú">Maipú</ion-select-option>
-        <ion-select-option value="La Pintana">La Pintana</ion-select-option>
-        <ion-select-option value="Puente Aranda">Puente Aranda</ion-select-option>
-        <ion-select-option value="La Granja">La Granja</ion-select-option>
-        <ion-select-option value="Recoleta">Recoleta</ion-select-option>
-        <ion-select-option value="San Miguel">San Miguel</ion-select-option>
-        <ion-select-option value="San Joaquín">San Joaquín</ion-select-option>
-        <ion-select-option value="San Ramón">San Ramón</ion-select-option>
-        <ion-select-option value="El bosque">El bosque</ion-select-option>
-        <ion-select-option value="Lo Espejo">Lo Espejo</ion-select-option>
-        <ion-select-option value="Lo Prado">Lo Prado</ion-select-option>
-        <ion-select-option value="Cerrillos">Cerrillos</ion-select-option>
-        <ion-select-option value="Cerro Navia">Cerro Navia</ion-select-option>
-        <ion-select-option value="Conchali">Conchali</ion-select-option>
-
-        <!-- Agrega más comunas aquí sea necesario -->
+      <ion-label>Rol</ion-label>
+      <ion-select  formControlName="role" required>
+          <ion-select-option *ngFor="let rol of roles" [value]="rol._id">{{rol.nombre}}</ion-select-option>
       </ion-select>
     </ion-item>
-     <ion-item>
-      <ion-label position="floating">Región</ion-label>
-      <ion-select formControlName="region">
-        <ion-select-option value="Metropolitana">Metropolitana</ion-select-option>
-        <ion-select-option value="Arica y Parinacota">Arica y Parinacota</ion-select-option>
-        <ion-select-option value="Tarapacá">Tarapacá</ion-select-option>
-        <ion-select-option value="Antofagasta">Antofagasta</ion-select-option>
-        <ion-select-option value="Atacama">Atacama</ion-select-option>
-        <ion-select-option value="Coquimbo">Coquimbo</ion-select-option>
-        <ion-select-option value="Valparaíso">Valparaíso</ion-select-option>
-        <ion-select-option value="Metropolitana">Metropolitana</ion-select-option>
-        <ion-select-option value="O'Higgins">O'Higgins</ion-select-option>
-        <ion-select-option value="Maule">Maule</ion-select-option>
-        <ion-select-option value="Ñuble">Ñuble</ion-select-option>
-        <ion-select-option value="Biobío">Biobío</ion-select-option>
-        <ion-select-option value="La Araucanía">La Araucanía</ion-select-option>
-        <ion-select-option value="Los Ríos">Los Ríos</ion-select-option>
-        <ion-select-option value="Los Lagos">Los Lagos</ion-select-option>
-        <ion-select-option value="Aysén">Aysén</ion-select-option>
-        <ion-select-option value="Magallanes">Magallanes</ion-select-option>
-        <!-- Agrega más regiones aquí sea necesario -->
-      </ion-select>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">Correo de recuperación</ion-label>
-      <ion-input [(ngModel)]="correoRecuperacion" type="email"></ion-input>
-    </ion-item>
+    
+     
+    
     <ion-button expand="full" type="submit">Registrar</ion-button>
-    <ion-button expand="full" (click)="recuperarContrasena()">Enviar link de recuperación</ion-button>
+    <ion-button expand="full" >Enviar link de recuperación</ion-button>
   </form>
 </ion-content>

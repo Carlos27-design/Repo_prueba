@@ -1,3 +1,8 @@
+import {
+  HttpClient,
+  provideHttpClient,
+  withInterceptorsFromDi,
+} from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
@@ -15,6 +20,7 @@ import { LogoutComponent } from './logout/logout.component';
 import { RecuperarComponent } from './recuperar/recuperar.component';
 import { RegistrarComponent } from './registrar/registrar.component';
 import { SharedModule } from '../shared/shared.module';
+import { AuthService } from '../services/auth.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +40,9 @@ import { SharedModule } from '../shared/shared.module';
     IonicModule,
     PageRoutingModule, // Aquí solo debes usar el PageRoutingModule
     SharedModule,
-    RouterModule
-  ]
+    RouterModule,
+  ],
+
+  providers: [AuthService],
 })
 export class PageModule {}
