@@ -1,0 +1,16 @@
+<ion-content>
+
+  <app-header></app-header>
+
+  <h1>Bienvenido a RegistrAPP</h1>
+
+  <!-- Mostrar mensaje solo si el usuario no está logueado -->
+  <p *ngIf="!isLoggedIn">Para continuar, inicie sesión con su cuenta DuocUC.</p>
+
+  <!-- Mostrar mensaje solo si el usuario está logueado -->
+  <p *ngIf="isLoggedIn">Esperamos que nuestra APP sea una gran experiencia para los alumnos como para los docentes de Duoc UC Sede Maipú, {{ usuario }}!</p>
+  <p *ngIf="isLoggedIn">¡Nos alegra tenerte aquí!</p>
+
+  <app-footer></app-footer>
+</ion-content>
+

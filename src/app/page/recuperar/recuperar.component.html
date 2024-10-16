@@ -1,0 +1,23 @@
+<ion-content>
+  <form>
+    <ion-item>
+      <ion-label position="floating">Username</ion-label>
+      <ion-input type="text" formControlName="username" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Rol</ion-label>
+      <ion-select formControlName="role" required>
+        <ion-select-option value="profesor">Profesor</ion-select-option>
+        <ion-select-option value="estudiante">Estudiante</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Número de teléfono</ion-label>
+      <ion-input type="tel" formControlName="phone" required></ion-input>
+    </ion-item>
+
+    <ion-button routerLink="/page/login" routerLinkActive="active">Recuperar contraseña</ion-button>
+  </form>
+</ion-content>

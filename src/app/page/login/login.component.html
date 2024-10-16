@@ -1,0 +1,25 @@
+<ion-content>
+  <form [formGroup]="loginForm">
+    <ion-item>
+      <ion-label position="floating">Username</ion-label>
+      <ion-input type="text" formControlName="username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" formControlName="password"></ion-input>
+    </ion-item>
+
+    <!-- Mensaje de error cuando falla la autenticación -->
+    <ion-text color="danger" *ngIf="loginFailed">
+      Usuario o clave incorrectos.
+    </ion-text>
+
+    <ion-button expand="full" (click)="onSubmit()">Login</ion-button>
+
+    <!-- Botón para recuperar la contraseña -->
+    <ion-button routerLink="/page/recuperar">Recuperar contraseña</ion-button>
+
+    <!-- Botón para registrar un nuevo usuario -->
+    <ion-button routerLink="/page/registrar">¿No tienes cuenta? Registrate aquí</ion-button>
+  </form>
+</ion-content>

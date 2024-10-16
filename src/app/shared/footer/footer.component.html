@@ -1,0 +1,31 @@
+<footer>
+  <nav>
+    <ul>
+      <li><a routerLink="/page/home" routerLinkActive="active">Home</a></li>
+
+      <!-- Mostrar opción de Login solo si el usuario no está logueado -->
+      <ng-container *ngIf="!isLoggedIn; else loggedInMenu">
+        <li><a routerLink="/page/login" routerLinkActive="active">Login</a></li>
+      </ng-container>
+
+      <!-- Menú para usuarios logueados -->
+      <ng-template #loggedInMenu>
+        <ng-container *ngIf="rol === 'profesor'">
+          <li><a routerLink="/page/vista-profesor" routerLinkActive="active">Profesor</a></li>
+        </ng-container>
+
+        <ng-container *ngIf="rol === 'alumno'">
+          <li><a routerLink="/page/vista-alumno" routerLinkActive="active">Alumno</a></li>
+        </ng-container>
+
+        <li><a routerLink="/page/logout" routerLinkActive="active">Logout</a></li>
+
+        <!-- Mostrar todas las opciones para admin -->
+        <ng-container *ngIf="rol === 'admin'">
+          <li><a routerLink="/page/vista-profesor" routerLinkActive="active">Profesor</a></li>
+          <li><a routerLink="/page/vista-alumno" routerLinkActive="active">Alumno</a></li>
+        </ng-container>
+      </ng-template>
+    </ul>
+  </nav>
+</footer>

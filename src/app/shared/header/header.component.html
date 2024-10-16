@@ -1,0 +1,11 @@
+<header>
+  <nav>
+    <img src="assets/duoc.png" alt="Duoc Logo" class="nav-left" />
+    <ul class="nav-right">
+      <li *ngIf="isLoggedIn">Bienvenido: {{usuario}}</li>
+      <li *ngIf="!isLoggedIn">
+        <a routerLink="/page/login" class="login-button">Iniciar Sesión</a>
+      </li>
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,58 @@
+/* Asegurarse de que el body y html ocupen el 100% del alto */
+html, body {
+  height: 100%;
+  margin: 0; /* Eliminar el margen por defecto */
+}
+
+/* Estilo para el footer */
+footer {
+  background-color: #012C56; /* Color de fondo del footer */
+  padding: 15px; /* Espaciado interno */
+  width: 100%; /* Ancho completo */
+  position: fixed; /* Posición fija para que esté siempre en la parte inferior */
+  bottom: 0; /* Colocar en la parte inferior */
+  left: 0; /* Alinear a la izquierda */
+  display: flex; /* Flexbox para alineación */
+  justify-content: center; /* Centrar horizontalmente */
+  z-index: 1000; /* Asegurar que esté por encima de otros elementos */
+}
+
+/* Estilo del nav */
+nav {
+  display: flex; /* Disposición en línea */
+}
+
+/* Estilo de la lista */
+ul {
+  list-style: none; /* Sin viñetas */
+  padding: 0; /* Sin espaciado interno */
+  margin: 0; /* Sin margen */
+  display: flex; /* Disposición en columna */
+  flex-direction: column; /* Cambiar a dirección de columna */
+  align-items: center; /* Alinear al centro horizontalmente */
+}
+
+/* Espaciado entre los elementos de la lista */
+ul li {
+  margin-bottom: 10px; /* Espacio entre las opciones */
+}
+
+/* Estilo de los enlaces */
+nav a {
+  color: #FFB800; /* Color del texto */
+  text-decoration: none; /* Sin subrayado */
+  font-size: 1.2rem; /* Tamaño de fuente */
+  padding: 10px; /* Espaciado interno de los enlaces */
+  transition: color 0.3s, transform 0.3s; /* Transición suave para el color y transformación */
+}
+
+/* Interacción al pasar el mouse */
+nav a:hover {
+  color: #e0a800; /* Color más oscuro al pasar el mouse */
+  transform: scale(1.1); /* Aumentar el tamaño al pasar el mouse */
+}
+
+/* Enlace activo */
+nav a.active {
+  font-weight: bold; /* Texto en negrita para el enlace activo */
+}

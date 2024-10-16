@@ -1,0 +1,55 @@
+/* Estilos generales para el formulario */
+form {
+  background-color: #012C56; /* Fondo del formulario */
+  padding: 40px; /* Aumentar el padding */
+  border-radius: 15px; /* Bordes más redondeados */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+  max-width: 450px; /* Ancho máximo del formulario */
+  margin: auto; /* Centrar el formulario */
+  color: #FFB800; /* Color del texto */
+  font-family: 'Arial', sans-serif; /* Fuente personalizada */
+}
+
+/* Estilo para los ion-items */
+ion-item {
+  --background: transparent; /* Fondo transparente para los campos de entrada */
+  --border-color: #FFB800; /* Color del borde */
+  margin-bottom: 20px; /* Espaciado entre los items */
+}
+
+/* Estilo para las etiquetas de los campos */
+ion-label {
+  color: #FFB800; /* Color de las etiquetas */
+  font-size: 1.2rem; /* Aumentar el tamaño de la fuente */
+}
+
+/* Estilo para los inputs */
+ion-input {
+  color: #FFB800; /* Color del texto de los inputs */
+  font-size: 1.1rem; /* Aumentar el tamaño de la fuente */
+}
+
+/* Mensaje de error */
+ion-text {
+  margin-top: 10px; /* Espaciado superior para el mensaje de error */
+  font-size: 1rem; /* Tamaño de fuente para el mensaje de error */
+}
+
+/* Estilo para el botón de inicio de sesión */
+ion-button {
+  background-color: #FFB800; /* Color de fondo del botón */
+  color: #012C56; /* Color del texto del botón */
+  border-radius: 5px; /* Bordes redondeados para el botón */
+  font-size: 1.2rem; /* Aumentar el tamaño de la fuente del botón */
+  padding: 12px; /* Aumentar el padding del botón */
+}
+
+/* Cambios al pasar el mouse sobre el botón */
+ion-button:hover {
+  background-color: #e0a800; /* Color más oscuro al pasar el mouse */
+}
+
+/* Cambios al hacer clic en el botón */
+ion-button:active {
+  background-color: #c69700; /* Color aún más oscuro al hacer clic */
+}
